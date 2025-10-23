@@ -21,11 +21,12 @@
       border: none;
       border-radius: 12px;
       cursor: pointer;
-      transition: transform 0.2s;
+      transition: transform 0.2s, background-color 0.3s;
     }
 
     button:hover {
       transform: scale(1.1);
+      background-color: #ff944d;
     }
 
     #message {
@@ -37,7 +38,7 @@
 </head>
 <body>
   <h1>🎃 Trick or Treat! 👻</h1>
-  <button id="treatBtn">Trick or Treat</button>
+  <button id="treatBtn">Let's find out</button>
   <div id="message">🍬 Treat! Ring the doorbell! 🔔</div>
 
   <audio id="doorbell" src="doorbell.mp3" preload="auto"></audio>
@@ -55,4 +56,5 @@
   <!-- redeploy test -->
 </body>
 </html>
+
 
