@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trick or Treat 🎃</title>
+  <style>
+    body {
+      background-color: #1a1a1a;
+      color: #ff7518;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    button {
+      font-size: 2em;
+      padding: 20px 40px;
+      background-color: #ff7518;
+      color: #1a1a1a;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+    }
+
+    #message {
+      margin-top: 40px;
+      font-size: 2em;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎃 Trick or Treat! 👻</h1>
+  <button id="treatBtn">Trick or Treat</button>
+  <div id="message">🍬 Treat! Ring the doorbell! 🔔</div>
+
+  <audio id="doorbell" src="doorbell.mp3" preload="auto"></audio>
+
+  <script>
+    const button = document.getElementById("treatBtn");
+    const message = document.getElementById("message");
+    const sound = document.getElementById("doorbell");
+
+    button.addEventListener("click", () => {
+      message.style.display = "block";
+      sound.play();
+    });
+  </script>
+</body>
+</html>
